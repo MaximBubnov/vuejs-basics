@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="main.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
+	<script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
+</head>
+<body>
+
+	<!-- 
+	<h5>v-show="false"</h5> - и все элемент скрыт
+	<h5>v-if="show"</h5> - полностью убирает элемент из DOM
+	<h5>v-else</h5> - если мы удалили/скрыли то отобразится этот блок
+
+
+	transition="slide" - для анимации
+	обозначает то, что мы элементу добавим класс slide-transition
+	и потом уже можем это использовать в css
+	также нам становится доступным два класса
+
+	.slide-enter, .slide-leave {
+    left: -100%;
+	}﻿
+
+	slide-enter - задает свойства перед тем как показать его на страницу
+
+	slide-leave - задает свойства перед тем как скрыть
+
+	<br><br> -->
+
+	<div id="app">
+
+		<header>
+			<button @click="show = !show">
+				<ion-icon name="menu"></ion-icon>
+			</button>
+		</header>
+
+		<aside v-if="show" transition="slide"></aside>
+		
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+</html>

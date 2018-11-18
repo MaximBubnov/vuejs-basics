@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="main.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	@click.prevent - говорит нам о том, что перезагружать страницу не надо
+	<br>
+	@keyup.enter='sayHi' - выводим в консоль по нажатию клавиши Enter
+	<br>
+	<br>
+	<div id="app">
+		<button @click.prevent="sayHi">Button</button>
+		<br><br>
+		<input type="text" v-model="message" @keyup.enter='yourName'>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+</html>

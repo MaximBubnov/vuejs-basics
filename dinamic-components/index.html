@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="main.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id="app">
+		<header>
+			<nav>
+
+				<a href="#" @click="switchView('square')">		Square
+				</a>
+
+				<a href="#" @click="switchView('triangle')">
+					Triangle
+				</a>
+				<a href="#" @click="switchView('or')">
+					Circle
+				</a>
+				<a href="#" @click="switchView('egg')">
+					Egg
+				</a>
+
+			</nav>
+		</header>
+		
+		<transition name="switch">
+			<component :is="currentVal"></component>
+		</transition>
+	</div>
+
+	<template id="square-temp">
+		<div class="square"></div>
+	</template>
+
+	<template id="triangle-temp">
+		<div class="triangle"></div>
+	</template>
+
+	<template id="or-temp">
+		<div class="or"></div>
+	</template>
+
+	<template id="egg-temp">
+		<div class="egg"></div>
+	</template>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+</html>

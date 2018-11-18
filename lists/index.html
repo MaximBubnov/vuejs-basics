@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="main.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	Сделаем список.
+	<br>
+	:class="{'strike' : car.status}" - работает таким образом
+	мы подставим каждому класс strike, если значение будет равно true
+	В нашем случае true только у McLarren
+
+<div id="app">
+	<ul>
+		<li v-for="car in cars" :class="{'strike' : car.status}">{{ car.name }}</li>
+	</ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+</html>
